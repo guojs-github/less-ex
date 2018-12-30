@@ -1,10 +1,10 @@
 .box2 {
-  color: darkgray;
+  color: red;
 }
 
 .box {
-  color: #242020;
-  border-color: #6f6f6f;
+  color: #121010;
+  border-color: #5e5e5e;
 }
 .box div {
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
