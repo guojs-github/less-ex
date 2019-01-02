@@ -1,7 +1,32 @@
 .box2 {
   color: red;
 }
+#bundle .button {
+  display: block;
+  border: 1px solid black;
+  background-color: grey;
+}
+#bundle .button:hover {
+  background-color: white;
+}
+#page #header {
+  color: white;
+}
 
+.box2 {
+  color: red;
+}
+#bundle .button {
+  display: block;
+  border: 1px solid black;
+  background-color: grey;
+}
+#bundle .button:hover {
+  background-color: white;
+}
+#page #header {
+  color: white;
+}
 .box {
   color: #121010;
   border-color: #5e5e5e;
@@ -9,4 +34,13 @@
 .box div {
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+#header a {
+  color: orange;
+  display: block;
+  border: 1px solid black;
+  background-color: grey;
+}
+#header a:hover {
+  background-color: white;
 }

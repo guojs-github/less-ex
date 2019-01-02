@@ -1,3 +1,5 @@
+@import '1';
+
 @base: #111111; // 此处申明变量
 
 .box-shadow(@style, @c) when (iscolor(@c)) { // 当第二个参数为颜色的时候被调用
@@ -15,3 +17,7 @@
   div { .box-shadow(0 0 5px, 30%) }
 }
 
+#header a {
+	color: orange;
+	#bundle > .button;
+}
