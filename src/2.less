@@ -1,0 +1,10 @@
+@media screen {
+    .screenClass:extend(.selector) {} // extend inside media
+    @media (min-width: 1023px) {
+        .selector {  // ruleset inside nested media - extend ignores it
+            color: blue;
+        }
+    }
+}
+
+.screenClass1:extend(.selector) {} // extend inside media

@@ -13,6 +13,15 @@
   color: white;
 }
 
+@media screen {
+}
+@media screen and (min-width: 1023px) {
+  .selector,
+  .screenClass1 {
+    color: blue;
+  }
+}
+
 .box2 {
   color: red;
 }
