@@ -1,0 +1,67 @@
+.mixin() {
+	@size: in-mixin;
+	@definedOnlyInMixin: in-mixin; 
+}
+
+.class {
+	@size: in-class;
+	margin: @size @definedOnlyInMixin;
+	.mixin();
+}
+
+@size: globaly-defined-value; // callers parent scope - no protection
+
+.unlock(@value) { 
+	.doSomething() { 
+		declaration: @value;
+	}
+}
+
+#namespace {
+	.unlock(5); 
+	.doSomething(); 
+}
+
+// declare detached ruleset
+@detached-ruleset: { 
+	background: red; 
+};
+
+// use detached ruleset
+.top {
+    @detached-ruleset(); 
+}
+
+@detached-1: { scope-detached: @one @two; };
+.one {
+  @one: visible;
+  .two {
+    @detached-2: @detached-1; // copying/renaming ruleset 
+    @two: visible; // ruleset can not see this variable
+  }
+}
+
+.use-place {
+  .one > .two(); 
+  @detached-2();
+}
+
+@variable: value-importer-global; // level 3
+#space {
+	@variable: value-importer-space;  // level 2
+	.importer-1() {
+		@variable: value-importer-1; // level 1
+		@detached: { scope-detached: @variable; }; // define detached ruleset
+	}
+}
+
+.importer-2() {
+	@variable: value-importer-2; // unlocked detached ruleset CAN see this variable, level 4
+	#space > .importer-1(); // unlock/import detached ruleset
+}
+
+.use-place1 {
+	@variable: value-user-place1; // level 5
+	.importer-2(); // unlock/import detached ruleset second time
+	@detached();
+}

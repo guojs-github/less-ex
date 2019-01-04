@@ -1,0 +1,15 @@
+.class {
+  margin: in-class in-mixin;
+}
+#namespace {
+  declaration: 5;
+}
+.top {
+  background: red;
+}
+.use-place {
+  scope-detached: visible visible;
+}
+.use-place1 {
+  scope-detached: value-importer-1;
+}
