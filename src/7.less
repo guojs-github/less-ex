@@ -1,0 +1,24 @@
+.mixin-1() {
+  box-shadow+: inset 0 0 10px #555;
+}
+
+.merge-1 {
+  .mixin-1();
+  box-shadow+: 0 0 20px black;
+}
+
+.mixin-2() {
+  transform+_: scale(2);
+}
+.merge-2 {
+  .mixin-2();
+  transform+_: rotate(15deg);
+}
+
+.mixin-3() {
+  border+_: 1px solid;
+}
+.merge-3 {
+  .mixin-3();
+  border+_: red;
+}

@@ -1,0 +1,9 @@
+.merge-1 {
+  box-shadow: inset 0 0 10px #555, 0 0 20px black;
+}
+.merge-2 {
+  transform: scale(2) rotate(15deg);
+}
+.merge-3 {
+  border: 1px solid red;
+}

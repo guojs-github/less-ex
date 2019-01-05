@@ -1,0 +1,10 @@
+.test-4-mixin (@a) when (@a > 100) {
+	color: red;
+}
+.test-4-mixin (@a) when (default()) {
+	color: white;
+} 
+
+.test-4 {
+	.test-4-mixin(99);
+}
